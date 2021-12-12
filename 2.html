@@ -1,0 +1,27 @@
+<script>
+    /*Write a program that receives a number that displays prime numbers or integers less 
+	than or equal to the number received. (It is a perfect number whose
+	sum of divisors is equal to itself. The number 6 is a perfect number)
+(The first number is a number that is not divisible by any number smaller than itself)
+
+*/
+var number=parseInt(prompt("enter a number"));
+var count=0;
+for (var i=1;i<=number;i++){
+if(number%i==0){
+    count++
+}
+}
+if(count==2){
+    console.log(number," is prime number");
+}
+else{
+    console.log(" is not prime number",number)
+}
+if (count==number){
+    console.log("عددی کامل است",number);
+}
+else{
+    console.log("عددی کامل نیست ",number)
+}
+</script>
