@@ -1,0 +1,45 @@
+<script>
+
+
+
+//  Write a program that puts 20 reads in two arrays, and
+//  shows the common elements of the two arrays 
+// as well as the community of the two arrays.
+let arrNum1=[];
+let arrNum2=[];
+let number1,number2,number3;
+for (let i=0;i<4;i++){
+    arrNum1[i]=parseInt(prompt("enter a number for array one",i));
+}
+for(let i=0;i<4;i++){
+    arrNum2[i]=parseInt(prompt("enter a numbr for array two",i));
+}
+number1=arrNum1.sort(function(x,y){
+    return x-y;
+});
+number2=arrNum2.sort(function(x,y){
+    return x-y;
+});
+number3=number1.concat(number2);
+number3=number3.sort(function(x,y){
+    return x-y;
+});
+console.log("array one=",arrNum1);
+console.log("sort array one=",number1);
+
+console.log("array two",arrNum2);
+console.log("sort array two=",number2);
+console.log("community of the two arrays=",number3)
+
+let arrSub=[];
+let index=0;
+for(let i=0;i<4;i++){
+    for (let j=0;j<4;j++){
+        if(arrNum1[i]==arrNum2[j]){
+arrSub[index]=arrNum2[j];
+index++;
+        }
+    }
+}
+console.log(" the common elements of the two arrays ",arrSub)
+    </script>
